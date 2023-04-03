@@ -39,9 +39,9 @@ import axios from 'axios'
             'white',
             'bg-black',
             'opacity-[.4]',
-            '../components/images/aire.png',
-            "/images/agua.png",
-            "./images/pres.png",
+            'bg-[url("/src/assets/components/images/aire.png")]',
+            'bg-[url("/src/assets/components/images/agua.png")]',
+            'bg-[url("/src/assets/components/images/pres.png")] w-[7px]',
             'bg-black',
         ]
         const bgLight = [
@@ -50,9 +50,9 @@ import axios from 'axios'
             'bg-blue-700',
             'black',
             'opacity-[0]',
-            '/src/assets/components/images/wind.png',
-            "/src/assets/components/images/humidity.jpg",
-            "./images/pressure.png",
+            'bg-[url("/src/assets/components/images/wind.png")]',
+            'bg-[url("/src/assets/components/images/humidity.jpg")]',
+            'bg-[url("/src/assets/components/images/pressure.png")] w-[19px]',
             'bg-black',
         ]
 
@@ -231,7 +231,7 @@ import axios from 'axios'
             <form onSubmit={positionAdd} className=' mt-[-30px] relative h-[30px] justify-self-center  gap-3 min-[720px]:w-[600px] min-[720px]:mt-[15px] z-20'>
             <input id='searchCity' type="text" placeholder="Find another city" className=' w-[200px] h-[30px] mt-[-100px] rounded-[10px] text-center min-[720px]:ml-[-20px] placeholder:text-center min-[720px]:w-[300px] min-[720px]:text-[20px] '/>
            
-            <button   className='mt-[100px] ml-[20px] w-[100px] rounded-[10px] h-[30px] bg-[#dbd3d3]'>Search</button>
+            <button   className='mt-[60px] ml-[20px] w-[100px] rounded-[10px] h-[30px] bg-[#dbd3d3]'>Search</button>
             </form>
 
 
@@ -281,18 +281,18 @@ import axios from 'axios'
             <div className= {`grid  mt-[20px] col-start-1 col-span-3 row-start-3  grid-cols-3 ${changeTheme ? bgLight[0] : bgDark[0]} rounded-[25px] h-[100px]  min-[720px]:row-star-2 min-[720px]:row-span-2 min-[720px]:col-start-3 min-[720px]:grid-cols-1 min-[720px]:h-[300px] min-[720px]:w-[150px] min-[720px]:ml-[40px] `}>
             
             <div className= {`flex gap-2 justify-self-center self-center border-r-2  border-r-[${changeTheme ? bgLight[3] : bgDark[3]}] w-[80px] h-[50px] min-[720px]:h-[70px] min-[720px]:w-[70px] min-[720px]:border-b-2 min-[720px]:border-b-[${changeTheme ? bgLight[3] : bgDark[3]}] min-[720px]:border-r-0 `}>
-            <div className='w-[18px] h-[19px] mt-[10px] bg-[url("/src/assets/components/images/wind.png")] bg-cover'></div>
+            <div className={`w-[19px] h-[19px] mt-[10px] ${changeTheme ? bgLight[5] : bgDark[6]} bg-cover`}></div>
                 <h5 className={`mt-[10px] ${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.wind.speed}</b></h5>
             </div>
             
             <div className= {`flex self-center justify-self-center gap-2 border-r-2 border-r-[${changeTheme ? 'black' : bgDark[3]}] w-[80px] h-[50px] min-[720px]:h-[70px] min-[720px]:w-[70px] min-[720px]:border-b-2 min-[720px]:border-b-[${changeTheme ? bgLight[3] : bgDark[3]}] min-[720px]:border-r-0 `}>
-              <div className='w-[18px] h-[18px] mt-[10px] bg-[url("/src/assets/components/images/humidity.jpg")] bg-cover'></div>
+              <div className={`w-[19px] h-[19px] mt-[10px] ${changeTheme ? bgLight[6] : bgDark[7]} bg-cover`}></div>
                 
                 <h5 className={`mt-[10px] ${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.main.humidity}%</b></h5>
             </div>
             
             <div className= ' flex self-center justify-self-center gap-2 mr-[10px] mt-[-10px]'>
-                <div className='w-[18px] h-[18px] mt-[4px] bg-[url("/src/assets/components/images/pressure.png")] bg-cover'></div>
+                <div className={` h-[19px] mt-[4px] ${changeTheme ? bgLight[7] : bgDark[8]} bg-cover bg-center`}></div>
                 <h5 className={`${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.main.pressure}</b></h5>
             
             </div>
