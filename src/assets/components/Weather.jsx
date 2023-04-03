@@ -51,7 +51,7 @@ import axios from 'axios'
             'black',
             'opacity-[0]',
             '/src/assets/components/images/wind.png',
-            "./images/humidity.png",
+            "/src/assets/components/images/humidity.jpg",
             "./images/pressure.png",
             'bg-black',
         ]
@@ -186,7 +186,6 @@ import axios from 'axios'
     axios.get(URL)  
     .then((res) => setWeather(res.data))
     .catch(err => console.log(err))
-    setChangeTheme(!changeTheme)
     
 
 }
@@ -282,17 +281,17 @@ import axios from 'axios'
             <div className= {`grid  mt-[20px] col-start-1 col-span-3 row-start-3  grid-cols-3 ${changeTheme ? bgLight[0] : bgDark[0]} rounded-[25px] h-[100px]  min-[720px]:row-star-2 min-[720px]:row-span-2 min-[720px]:col-start-3 min-[720px]:grid-cols-1 min-[720px]:h-[300px] min-[720px]:w-[150px] min-[720px]:ml-[40px] `}>
             
             <div className= {`flex gap-2 justify-self-center self-center border-r-2  border-r-[${changeTheme ? bgLight[3] : bgDark[3]}] w-[80px] h-[50px] min-[720px]:h-[70px] min-[720px]:w-[70px] min-[720px]:border-b-2 min-[720px]:border-b-[${changeTheme ? bgLight[3] : bgDark[3]}] min-[720px]:border-r-0 `}>
-                <img src= {changeTheme ? bgLight[5] : bgDark[6]} alt=""  className='w-[18px] h-[16px] mt-[10px]'/>
+                <img src= {changeTheme ? bgLight[5] : bgDark[6]} alt="wind"  className='w-[18px] h-[16px] mt-[10px]'/>
                 <h5 className={`mt-[10px] ${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.wind.speed}</b></h5>
             </div>
             
             <div className= {`flex self-center justify-self-center gap-2 border-r-2 border-r-[${changeTheme ? 'black' : bgDark[3]}] w-[80px] h-[50px] min-[720px]:h-[70px] min-[720px]:w-[70px] min-[720px]:border-b-2 min-[720px]:border-b-[${changeTheme ? bgLight[3] : bgDark[3]}] min-[720px]:border-r-0 `}>
-                <img src={changeTheme ? bgLight[6] : bgDark[7]} alt=""  className='w-[18px] h-[16px] mt-[10px]'/>
+                <img src={changeTheme ? bgLight[6] : bgDark[7]} alt="humidity"  className='w-[18px] h-[16px] mt-[10px]'/>
                 <h5 className={`mt-[10px] ${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.main.humidity}%</b></h5>
             </div>
             
             <div className= ' flex self-center justify-self-center gap-2 mr-[10px]'>
-                <img src={changeTheme ? bgLight[7] : bgDark[8]} alt=""  className='w-[18px] h-[16px]'/>
+                <img src={changeTheme ? bgLight[7] : bgDark[8]} alt="pressure"  className='w-[18px] h-[16px]'/>
                 <h5 className={`${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.main.pressure}</b></h5>
             
             </div>
