@@ -281,18 +281,18 @@ import axios from 'axios'
             <div className= {`grid  mt-[20px] col-start-1 col-span-3 row-start-3  grid-cols-3 ${changeTheme ? bgLight[0] : bgDark[0]} rounded-[25px] h-[100px]  min-[720px]:row-star-2 min-[720px]:row-span-2 min-[720px]:col-start-3 min-[720px]:grid-cols-1 min-[720px]:h-[300px] min-[720px]:w-[150px] min-[720px]:ml-[40px] `}>
             
             <div className= {`flex gap-2 justify-self-center self-center border-r-2  border-r-[${changeTheme ? bgLight[3] : bgDark[3]}] w-[80px] h-[50px] min-[720px]:h-[70px] min-[720px]:w-[70px] min-[720px]:border-b-2 min-[720px]:border-b-[${changeTheme ? bgLight[3] : bgDark[3]}] min-[720px]:border-r-0 `}>
-                <img src= {changeTheme ? bgLight[5] : bgDark[6]} alt="wind"  className='w-[18px] h-[16px] mt-[10px]'/>
+            <div className='w-[18px] h-[19px] mt-[10px] bg-[url("/src/assets/components/images/wind.png")] bg-cover'></div>
                 <h5 className={`mt-[10px] ${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.wind.speed}</b></h5>
             </div>
             
             <div className= {`flex self-center justify-self-center gap-2 border-r-2 border-r-[${changeTheme ? 'black' : bgDark[3]}] w-[80px] h-[50px] min-[720px]:h-[70px] min-[720px]:w-[70px] min-[720px]:border-b-2 min-[720px]:border-b-[${changeTheme ? bgLight[3] : bgDark[3]}] min-[720px]:border-r-0 `}>
-              <div className='w-[18px] h-[16px] mt-[10px] bg-[url("/public/bg/neblina.jpg")] '></div>
+              <div className='w-[18px] h-[18px] mt-[10px] bg-[url("/src/assets/components/images/humidity.jpg")] bg-cover'></div>
                 
                 <h5 className={`mt-[10px] ${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.main.humidity}%</b></h5>
             </div>
             
-            <div className= ' flex self-center justify-self-center gap-2 mr-[10px]'>
-                <img src='../components/images/pressure.png' alt="pressure"  className='w-[18px] h-[16px]'/>
+            <div className= ' flex self-center justify-self-center gap-2 mr-[10px] mt-[-10px]'>
+                <div className='w-[18px] h-[18px] mt-[4px] bg-[url("/src/assets/components/images/pressure.png")] bg-cover'></div>
                 <h5 className={`${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.main.pressure}</b></h5>
             
             </div>
