@@ -286,7 +286,8 @@ import axios from 'axios'
             </div>
             
             <div className= {`flex self-center justify-self-center gap-2 border-r-2 border-r-[${changeTheme ? 'black' : bgDark[3]}] w-[80px] h-[50px] min-[720px]:h-[70px] min-[720px]:w-[70px] min-[720px]:border-b-2 min-[720px]:border-b-[${changeTheme ? bgLight[3] : bgDark[3]}] min-[720px]:border-r-0 `}>
-                <img src='/public/bg/neblina.jpg' alt="humidity"  className='w-[18px] h-[16px] mt-[10px]'/>
+              <div className='w-[18px] h-[16px] mt-[10px] bg-[url(/src/assets/components/images/wind.png)] '></div>
+                
                 <h5 className={`mt-[10px] ${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.main.humidity}%</b></h5>
             </div>
             
