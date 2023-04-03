@@ -39,9 +39,9 @@ import axios from 'axios'
             'white',
             'bg-black',
             'opacity-[.4]',
-            '/images/aire.png',
+            '../components/images/aire.png',
             "/images/agua.png",
-            "/images/pres.png",
+            "./images/pres.png",
             'bg-black',
         ]
         const bgLight = [
@@ -50,7 +50,7 @@ import axios from 'axios'
             'bg-blue-700',
             'black',
             'opacity-[0]',
-            './images/wind.png',
+            '/src/assets/components/images/wind.png',
             "./images/humidity.png",
             "./images/pressure.png",
             'bg-black',
