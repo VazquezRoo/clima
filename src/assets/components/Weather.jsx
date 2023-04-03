@@ -286,12 +286,12 @@ import axios from 'axios'
             </div>
             
             <div className= {`flex self-center justify-self-center gap-2 border-r-2 border-r-[${changeTheme ? 'black' : bgDark[3]}] w-[80px] h-[50px] min-[720px]:h-[70px] min-[720px]:w-[70px] min-[720px]:border-b-2 min-[720px]:border-b-[${changeTheme ? bgLight[3] : bgDark[3]}] min-[720px]:border-r-0 `}>
-                <img src={changeTheme ? bgLight[6] : bgDark[7]} alt="humidity"  className='w-[18px] h-[16px] mt-[10px]'/>
+                <img src='/src/assets/components/images/humidity.jpg' alt="humidity"  className='w-[18px] h-[16px] mt-[10px]'/>
                 <h5 className={`mt-[10px] ${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.main.humidity}%</b></h5>
             </div>
             
             <div className= ' flex self-center justify-self-center gap-2 mr-[10px]'>
-                <img src={changeTheme ? bgLight[7] : bgDark[8]} alt="pressure"  className='w-[18px] h-[16px]'/>
+                <img src='../components/images/pressure.png' alt="pressure"  className='w-[18px] h-[16px]'/>
                 <h5 className={`${changeTheme ? bgLight[1] : bgDark[1]} `}><b>{weather.main.pressure}</b></h5>
             
             </div>
