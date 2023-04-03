@@ -1,4 +1,4 @@
-    import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
     import './text.css'
     // import 'App.jsx'
     import Loader from './Loader'
@@ -228,7 +228,7 @@ import axios from 'axios'
         weather ? (
           <div className={`h-[100vh] ${bgChange} w-full bg-cover  grid font-lato`}>
 
-            <form onSubmit={positionAdd} className=' mt-[-30px] relative h-[30px] justify-self-center  gap-3 min-[720px]:w-[600px] min-[720px]:mt-[15px] z-20'>
+            <form onSubmit={positionAdd} className=' mt-[-30px] relative h-[30px] justify-self-center  gap-3 min-[720px]:w-[600px] min-[720px]:mt-[15px] z-50'>
             <input id='searchCity' type="text" placeholder="Find another city" className=' w-[200px] h-[30px] mt-[-100px] rounded-[10px] text-center min-[720px]:ml-[-20px] placeholder:text-center min-[720px]:w-[300px] min-[720px]:text-[20px] '/>
            
             <button   className='mt-[60px] ml-[20px] w-[100px] rounded-[10px] h-[30px] bg-[#dbd3d3]'>Search</button>
