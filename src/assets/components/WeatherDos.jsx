@@ -52,10 +52,6 @@ function WeatherDos() {
       .then((res) => setWeather(res.data))
       .catch(err => console.log(err))
 
-      console.log(weather?.sys.sunrise)
-      console.log(weather)
-      
- 
     // setChangeTheme(true)
 
     }
@@ -90,8 +86,7 @@ function WeatherDos() {
     const hora = fecha.getHours()
     const minutos = fecha.getMinutes()
     
-
-    return dia + ' ' + months[mes]  + ', ' + hora + ':' + minutos + ' Hrs'
+    return dia + ' ' + months[mes]  + ', ' + hora.toString().padStart(2,'0') + ':' + minutos.toString().padStart(2,'0') + ' Hrs'
   }
 
   const day = getDate()
@@ -168,7 +163,6 @@ function WeatherDos() {
             .then(res=>setWeather(res.data))
             .catch(err=> console.log(err))
         }
-        console.log(weather)
 
     },[searchCity])
 
