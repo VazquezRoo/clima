@@ -260,9 +260,9 @@ function WeatherDos() {
             <div className='w-full flex gap-2 '>
             <i className='bx bxs-sun text-[25px] '></i>
             <p className='text-start'>Thermal sensation:</p>
-            <div className={`w-[70px] flex gap-3 overflow-hidden `}>
-            <span className={`w-full duration-500 ${temp? 'ml-0': '-ml-[100%]'}`}>{tempCelsius + '°C'}</span>
-            <span className='w-full'>{tempF + '°F'}</span>
+            <div className={`w-[60px] flex gap-3 overflow-hidden `}>
+            <p className={`w-full duration-500 ${temp? 'ml-0': '-ml-[100%]'}`}>{tempCelsius + '°C'}</p>
+            <p className='w-full'>{tempF + '°F'}</p>
             </div>
             </div>
             <div className='flex gap-3'>
