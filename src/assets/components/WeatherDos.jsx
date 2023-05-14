@@ -249,14 +249,14 @@ function WeatherDos() {
         <img src="/images/Clear-dos.png" alt="" onClick={goLight} className={`animation cursor-pointer z-30 hover:opacity-70 duration-300`} />
 
         </div>
-        <div className='absolute flex flex-col justify-between items-center w-full h-full py-20'>
+        <div className='absolute flex flex-col justify-between items-center w-full h-full py-10'>
 
         <div>
         <h3 className='shadowDos text-[30px] min-[400px]:text-[40px]'>Weather App</h3>
         <p className='shadowDos text-[15px] min-[400px]:text-[20px]'>What is your favorite color?</p>
         </div>
 
-        <div className='text-[10px] min-[300px]:text-[20px]'>
+        <div className='text-[10px] min-[400px]:text-[20px]'>
         <p className='shadowDos'>Created by Cristian Vazquez</p>
         <p className='shadowDos'>Designer: Junior Pacheco</p> 
         </div>
