@@ -244,8 +244,8 @@ function WeatherDos() {
         </div>
 
         <div className='text-[10px] min-[300px]:text-[20px]'>
-        <p className='shadowDos'>created by Cristian Vazquez</p>
-        <p className='shadowDos'>designer Junior Pacheco</p> 
+        <p className='shadowDos'>Created by Cristian Vazquez</p>
+        <p className='shadowDos'>Designer: Junior Pacheco</p> 
         </div>
         </div>
         
