@@ -114,6 +114,7 @@ function WeatherDos() {
   const ModalOff = () =>{
         setSearch(false)
         setInformacion(false)
+        setBienvenida(false)
         setSearchCity()
   }
 
@@ -123,6 +124,7 @@ function WeatherDos() {
 
     const changeModal = () =>{
         setSearch(false)
+        setBienvenida(false)
         setInformacion(!informacion)
         
     }
@@ -134,6 +136,7 @@ function WeatherDos() {
 
     const changeModalSearch = () =>{
         setInformacion(false)
+        setBienvenida(false)
         setSearch(!search)
     }
 
@@ -224,6 +227,12 @@ function WeatherDos() {
 
     }
 
+    const goHome = () => {
+      setSearch(false)
+      setInformacion(false)
+      setBienvenida(!bienvenida)
+    }
+
 
 
   return (
@@ -231,7 +240,7 @@ function WeatherDos() {
     <main className={`w-[90%] ${darkTheme?dark.bg:ligth.bg} relative max-w-[400px] aspect-[1/1] max-h-[600px] p-3 border-[5px] ${darkTheme? 'border-red-300':' border-blue-500'} rounded-md`}>
 
       {/* Modal bienvenida */}
-      <div className={`w-full duration-500 ${bienvenida? 'h-full z-30':'h-0'} overflow-hidden absolute top-0 left-0`}>
+      <div className={`w-full duration-500 ${bienvenida? 'h-[91%] min-[400px]:h-[93%] z-30 text-white':'h-0 text-white'} overflow-hidden absolute top-0 left-0`}>
       <div className={`w-full h-full grid grid-cols-2  bg-blue-300 z-20`}>
         <div className='w-full h-full bg-black grid items-center'>
           <img src="/images/Clear.png" alt="" onClick={goDark} className={`animation cursor-pointer z-30 hover:opacity-70 duration-300`} />
@@ -355,8 +364,9 @@ function WeatherDos() {
         {/* Menu */}
 
         
-        <div className='grid grid-cols-4 w-[100%] h-[30px] mt-[20px] items-end border-t-[1px] border-black/20'>
-        <i onClick={ModalOff} className='bx bx-home-alt-2 h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]'></i>
+        <div className='grid grid-cols-5 w-[100%] h-[30px] mt-[20px] items-end border-t-[1px] border-black/20'>
+        <i onClick={goHome} className='bx bx-home-alt-2 h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]'></i>
+        <i onClick={ModalOff} className='bx bx-map   h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]'></i>
         <i onClick={changeModalSearch} className='bx bx-search-alt-2 h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]' ></i>
         <i onClick={changeModal} className='bx bx-food-menu h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]' ></i>
         <p onClick={changeTemp} className='text-center h-full cursor-pointer hover:text-blue-600 hover:pt-[3px] duration-300 hover:text-[20px]'>{temp? '°C' :  '°F  '}</p>
