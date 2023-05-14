@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Weather from './assets/components/Weather'
+import WeatherDos from './assets/components/WeatherDos'
 
 function App() {
 
 
   return (
     
-    <div className={`App h-[100vh] w-full grid font-lato z-0`}>
+    <div className={`App`}>
+
+      <WeatherDos/>
       
-      <Weather/>
+      {/* <Weather/>   */}
 
     </div>
   )
