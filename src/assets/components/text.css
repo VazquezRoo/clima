@@ -20,3 +20,17 @@
 .shadowDos{
 	text-shadow: 0 0 5px black;
 }
+
+.loader{
+	animation: 1s loading linear infinite;
+
+}
+
+@keyframes loading {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
