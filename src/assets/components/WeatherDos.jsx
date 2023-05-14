@@ -227,7 +227,7 @@ function WeatherDos() {
     <main className={`w-[90%] ${darkTheme?dark.bg:ligth.bg} relative max-w-[400px] aspect-[1/1] max-h-[600px] p-3 border-[5px] ${darkTheme? 'border-red-300':' border-blue-500'} rounded-md`}>
 
       {/* Modal bienvenida */}
-      <div className={`w-full duration-500 ${bienvenida? 'h-full z-20':'h-0'} overflow-hidden absolute top-0 left-0`}>
+      <div className={`w-full duration-500 ${bienvenida? 'h-full z-30':'h-0'} overflow-hidden absolute top-0 left-0`}>
       <div className={`w-full h-full grid grid-cols-2  bg-blue-300 z-20`}>
         <div className='w-full h-full bg-black grid items-center'>
           <img src="/images/Clear.png" alt="" onClick={goDark} className={`animation cursor-pointer z-30 hover:opacity-70 duration-300`} />
@@ -259,7 +259,7 @@ function WeatherDos() {
 
        {/* Loader */}
 
-      <div className={`${darkTheme?'bg-white text-black/50':  'bg-neutral-800'} w-full flex flex-col justify-center gap-6 items-center overflow-hidden absolute top-0 left-0 z-20 ${!weather? 'h-full':'h-0'}`}>
+      <div className={`${darkTheme?'bg-white text-black/50':  'bg-neutral-800'} w-full flex flex-col justify-center gap-6 items-center overflow-hidden absolute top-0 left-0 z-20 ${weather? 'h-0':'h-full'}`}>
         <h3 className='text-[30px]'>Loading</h3>
       <i class='bx bx-loader-alt text-[60px] loader'></i>
 
