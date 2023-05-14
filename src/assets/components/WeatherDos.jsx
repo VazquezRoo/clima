@@ -231,7 +231,7 @@ function WeatherDos() {
 
   return (
     <div className={` min-w-screen  ${darkTheme?'bg-gray-200' : 'bg-black/60'} min-h-screen w-screen grid font-lato z-0 justify-center justify-items-center pt-[10px]`}>
-    <main className={`w-[90%] ${darkTheme?dark.bg:ligth.bg} relative max-w-[400px] aspect-[1/1] max-h-[600px] p-3 border-[5px] ${darkTheme? 'border-red-300':' border-blue-500'} rounded-md`}>
+    <main className={`w-[90%] ${darkTheme?dark.bg:ligth.bg} relative max-w-[500px] aspect-[1/1] max-h-[600px] p-3 border-[5px] ${darkTheme? 'border-red-300':' border-blue-500'} rounded-md`}>
 
       {/* Modal bienvenida */}
       <div className={`w-full duration-500 ${bienvenida? 'h-[91%] min-[400px]:h-[93%] z-30 text-white':'h-0 text-white'} overflow-hidden absolute top-0 left-0`}>
@@ -333,16 +333,16 @@ function WeatherDos() {
         {/* Home */}
 
 
-        <section className='grid justify-items-start min-[400px]:text-[25px] overflow-hidden'>
+        <section className='grid justify-items-start min-[400px]:text-[35px] min-[]: overflow-hidden'>
                 <div className='grid w-full grid-cols-[auto_auto_1fr] gap-3'>
                 
                 {
                   dayTheme? 
                   <i className='bx bxs-sun text-yellow-400'></i>:
-                  <i className={`bx bxs-moon ${darkTheme?'text-gray-800': 'text-white'}`} ></i>
+                  <i className={`bx bxs-moon ${darkTheme?'text-gray-800': ' text-slate-200'}`} ></i>
                 }
                 <span className={`${darkTheme?dark.day:ligth.day} ${searchCity? 'opacity-0':'opacity-100'} min-[400px]:text-[20px]`}>{day}</span>
-                <i onClick={changeDarkTheme} class={`${!darkTheme?'text-white': 'text-black'} bx bxs-palette text-end w-full cursor-pointer`}></i>
+                <i onClick={changeDarkTheme} class={`${!darkTheme?'text-slate-400': 'text-black'} bx bxs-palette text-end w-full cursor-pointer`}></i>
                 </div>
                 <h4 className='w-[70%]'><b>{weather?.name + ', ' + weather?.sys.country}</b></h4>
                 <div className='w-[80%] aspect-[9/10] grid justify-items-center justify-self-center items-center'>
@@ -359,11 +359,11 @@ function WeatherDos() {
 
         
         <div className='grid grid-cols-5 w-[100%] h-[30px] mt-[20px] items-end border-t-[1px] border-black/20'>
-        <i onClick={goHome} className='bx bx-home-alt-2 h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]'></i>
-        <i onClick={ModalOff} className='bx bx-map   h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]'></i>
-        <i onClick={changeModalSearch} className='bx bx-search-alt-2 h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]' ></i>
-        <i onClick={changeModal} className='bx bx-food-menu h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]' ></i>
-        <p onClick={changeTemp} className='text-center h-full cursor-pointer hover:text-blue-600 hover:pt-[3px] duration-300 hover:text-[20px]'>{temp? '°C' :  '°F  '}</p>
+        <i onClick={goHome} className='bx bx-home-alt-2 h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px] min-[400px]:text-[25px] min-[400px]:hover:text-[30px]'></i>
+        <i onClick={ModalOff} className='bx bx-map   h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]  min-[400px]:text-[25px] min-[400px]:hover:text-[30px]'></i>
+        <i onClick={changeModalSearch} className='bx bx-search-alt-2 h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]  min-[400px]:text-[25px] min-[400px]:hover:text-[30px]' ></i>
+        <i onClick={changeModal} className='bx bx-food-menu h-full text-center border-r-[1px] border-black/20 pt-[5px] cursor-pointer hover:text-blue-600 hover:pt-[10px] duration-300 hover:text-[20px]  min-[400px]:text-[25px] min-[400px]:hover:text-[30px]' ></i>
+        <p onClick={changeTemp} className='text-center h-full cursor-pointer hover:text-blue-600 hover:pt-[3px] duration-300 hover:text-[20px]  min-[400px]:text-[25px] min-[400px]:hover:text-[30px]'>{temp? '°C' :  '°F  '}</p>
 
         </div>
     
