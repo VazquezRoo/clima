@@ -319,7 +319,7 @@ function WeatherDos() {
                     <img src={climaDescription === 'Clear'? `/images/${dia}.png`  :`/images/${climaDescription}.png`} alt="" className='animation' />
                 </div>
                 <div className='w-[200%] flex overflow-hidden'>
-                <p className={`text-[50px] min-[400px]:text-[70px] w-full duration-500 ${temp? 'ml-p':'-ml-[100%]'}`}>{tempCelsius + '°C'}</p>
+                <p className={`text-[50px] min-[400px]:text-[70px] w-full duration-500 ${!temp? 'ml-p':'-ml-[100%]'}`}>{tempCelsius + '°C'}</p>
                 <p className='text-[50px] min-[400px]:text-[70px] w-full '>{tempF + '°F'}</p>
                 </div>
                 <span>{weather?.weather[0].main + ', ' + weather?.weather[0].description}</span>
