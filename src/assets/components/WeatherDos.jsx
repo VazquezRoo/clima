@@ -263,7 +263,7 @@ function WeatherDos() {
 
        {/* Loader */}
 
-      <div className={`${darkTheme?'bg-white text-black/50':  'bg-neutral-800'} w-full flex flex-col justify-center gap-6 items-center overflow-hidden absolute top-0 left-0 z-20 ${weather? 'h-0':'h-full'}`}>
+      {/* <div className={`${darkTheme?'bg-white text-black/50':  'bg-neutral-800'} w-full flex flex-col justify-center gap-6 items-center overflow-hidden absolute top-0 left-0 z-20 ${weather? 'h-0':'h-full'}`}>
         <div className='relative grid justify-items-center group refresh'>
         <p className={`${!darkTheme? 'bg-gray-200 text-black ' : 'bg-black/20 text-black'} w-[200px] absolute -top-8 h-0 overflow-hidden group-hover:h-[30px]  text-[10px] text-center`}>No se puede obtener informacion de su ubicacion, verifique su conexion</p>
         <i className='bx bxs-info-circle '></i>
@@ -275,7 +275,7 @@ function WeatherDos() {
       <i className='bx bx-loader-alt text-[60px] loader'></i>
       
 
-      </div>
+      </div> */}
 
       
 
