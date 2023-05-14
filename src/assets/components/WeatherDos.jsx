@@ -11,6 +11,7 @@ function WeatherDos() {
      const [dia, setDia] = useState('')
      const [darkTheme, setDarkTheme] = useState(false)
      const [bienvenida, setBienvenida] = useState(true)
+     const [refresh, setRefresh] = useState(true)
 
 
 
@@ -29,8 +30,11 @@ function WeatherDos() {
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(success)
     
-      }, [])
-      console.log(coordsUser)
+      }, [refresh])
+
+      const handleClickRefresh = () =>{
+        setRefresh(!refresh)
+      }
 
 
 
@@ -259,9 +263,17 @@ function WeatherDos() {
 
        {/* Loader */}
 
-      <div className={`${darkTheme?'bg-white text-black/50':  'bg-neutral-800'} w-full flex flex-col justify-center gap-6 items-center overflow-hidden absolute top-0 left-0 z-20 ${weather? 'h-0':'h-full'}`}>
+      <div className={`${darkTheme?'bg-white text-black/50':  'bg-neutral-800'} w-full flex flex-col justify-center gap-6 items-center overflow-hidden absolute top-0 left-0 z-20 ${!weather? 'h-0':'h-full'}`}>
+        <div className='relative grid justify-items-center group refresh'>
+        <p className={`${!darkTheme? 'bg-gray-200 text-black ' : 'bg-black/20 text-black'} w-[200px] absolute -top-8 h-0 overflow-hidden group-hover:h-[30px]  text-[10px] text-center`}>No se puede obtener informacion de su ubicacion, verifique su conexion</p>
+        <i className='bx bxs-info-circle '></i>
+        
+
+        </div>
+      <i onClick={handleClickRefresh} className='bx bx-refresh text-[30px] refresh cursor-pointer'></i>
         <h3 className='text-[30px]'>Loading</h3>
-      <i class='bx bx-loader-alt text-[60px] loader'></i>
+      <i className='bx bx-loader-alt text-[60px] loader'></i>
+      
 
       </div>
 

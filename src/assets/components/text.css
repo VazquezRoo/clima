@@ -26,6 +26,24 @@
 
 }
 
+.refresh{
+	animation: 8s refresh linear ;
+}
+
+@keyframes refresh {
+	0% {
+		visibility: hidden;
+	}
+	90% {
+		visibility: hidden;
+	}
+	100%{
+		visibility: visible;
+	}
+}
+
+
+
 @keyframes loading {
 	0% {
 		transform: rotate(0deg);
