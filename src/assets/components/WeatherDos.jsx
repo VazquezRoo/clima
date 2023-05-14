@@ -254,13 +254,13 @@ function WeatherDos() {
       </div>
 
         {/* Informacion */}
-        <div className={`w-full absolute flex flex-col justify-center items-start pl-[10%] gap-6 top-0 left-0 ${darkTheme?'bg-white':' bg-neutral-600'} duration-500 ${informacion? 'h-[90%]': 'h-0 overflow-hidden'} `}>
+        <div className={`w-full absolute flex flex-col justify-center items-start pl-[10%] gap-2 min-[400px]:gap-6 top-0 left-0 ${darkTheme?'bg-white':' bg-neutral-600'} duration-500 ${informacion? 'h-[90%]': 'h-0 overflow-hidden'} `}>
             <h3 className='text-[30px] w-[90%] text-center'>More information about {weather?.name}</h3>
 
             <div className='w-full flex gap-2 '>
             <i className='bx bxs-sun text-[25px] '></i>
             <p className='text-start'>Thermal sensation:</p>
-            <div className={`w-[60px] flex gap-2 overflow-hidden `}>
+            <div className={`w-[70px] flex gap-3 overflow-hidden `}>
             <span className={`w-full duration-500 ${temp? 'ml-0': '-ml-[100%]'}`}>{tempCelsius + '°C'}</span>
             <span className='w-full'>{tempF + '°F'}</span>
             </div>
