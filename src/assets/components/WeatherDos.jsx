@@ -83,8 +83,8 @@ function WeatherDos() {
     const fecha  = new Date()
     const dia = fecha.getDate()
     const mes = fecha.getMonth()
-    const hora = fecha.getHours().padStart(2,0)
-    const minutos = fecha.getMinutes().padStart(2,0)
+    const hora = fecha.getHours()
+    const minutos = fecha.getMinutes()
     
 
     return dia + ' ' + months[mes]  + ', ' + hora + ':' + minutos + ' Hrs'
