@@ -272,12 +272,12 @@ function WeatherDos() {
         <div className={`w-full absolute flex flex-col justify-center items-start pl-[10%] gap-2 min-[400px]:gap-6 top-0 left-0 ${darkTheme?'bg-white':' bg-neutral-600'} duration-500 ${informacion? 'h-[90%]': 'h-0 overflow-hidden'} `}>
             <h3 className='text-[30px] w-[90%] text-center'>More information about {weather?.name}</h3>
 
-            <div className='w-full flex gap-2 '>
+            <div className='w-full  flex gap-2 '>
             <i className='bx bxs-sun text-[25px] '></i>
             <p className='text-start'>Thermal sensation:</p>
-            <div className={`w-[60px] flex gap-3 overflow-hidden `}>
-            <p className={`w-full duration-500 ${!temp? 'ml-0': '-ml-[100%]'}`}>{tempCelsius + '°C'}</p>
-            <p className='w-full'>{tempF + '°F'}</p>
+            <div className={` flex overflow-hidden`}>
+            <p className={`w-full overflow-hidden ${!temp? 'invisible': 'visible'}`}>{tempCelsius + '°C'}</p>
+            <p className={`w-full absolute overflow-hidden  ${temp? 'invisible': 'visible'}`}>{tempF + '°F'}</p>
             </div>
             </div>
             <div className='flex gap-3'>
@@ -334,7 +334,7 @@ function WeatherDos() {
                     <img src={climaDescription === 'Clear'? `/images/${dia}.png`  :`/images/${climaDescription}.png`} alt="" className='animation' />
                 </div>
                 <div className='w-[200%] flex overflow-hidden'>
-                <p className={`text-[50px] min-[400px]:text-[70px] w-full duration-500 ${!temp? 'ml-p':'-ml-[100%]'}`}>{tempCelsius + '°C'}</p>
+                <p className={`text-[50px] min-[400px]:text-[70px] w-full duration-500 ${!temp? 'ml-0':'-ml-[100%]'}`}>{tempCelsius + '°C'}</p>
                 <p className='text-[50px] min-[400px]:text-[70px] w-full '>{tempF + '°F'}</p>
                 </div>
                 <span>{weather?.weather[0].main + ', ' + weather?.weather[0].description}</span>
