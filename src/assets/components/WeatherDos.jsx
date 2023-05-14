@@ -288,8 +288,8 @@ function WeatherDos() {
             <i className='bx bxs-sun text-[25px] '></i>
             <p className='text-start'>Thermal sensation:</p>
             <div className={` flex overflow-hidden`}>
-            <p className={`w-full overflow-hidden ${!temp? 'invisible': 'visible'}`}>{tempCelsius + '°C'}</p>
-            <p className={`w-full absolute overflow-hidden  ${temp? 'invisible': 'visible'}`}>{tempF + '°F'}</p>
+            <p className={`w-full overflow-hidden ${temp? 'invisible': 'visible'}`}>{tempCelsius + '°C'}</p>
+            <p className={`w-full absolute overflow-hidden  ${!temp? 'invisible': 'visible'}`}>{tempF + '°F'}</p>
             </div>
             </div>
             <div className='flex gap-3'>
