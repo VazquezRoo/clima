@@ -83,8 +83,8 @@ function WeatherDos() {
     const fecha  = new Date()
     const dia = fecha.getDate()
     const mes = fecha.getMonth()
-    const hora = fecha.getHours()
-    const minutos = fecha.getMinutes()
+    const hora = fecha.getHours().padStart(2,0)
+    const minutos = fecha.getMinutes().padStart(2,0)
     
 
     return dia + ' ' + months[mes]  + ', ' + hora + ':' + minutos + ' Hrs'
@@ -279,7 +279,7 @@ function WeatherDos() {
             </div>
             <div className='flex gap-3'>
             <i className='bx bx-wind  text-[25px]'></i>
-            <p className='w-full text-start'>Wint Speed: <span>{weather?.wind.speed} meter/sec</span></p>
+            <p className='w-full text-start'>Wind Speed: <span>{weather?.wind.speed} meter/sec</span></p>
             </div>
 
         </div>
